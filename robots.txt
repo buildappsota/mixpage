@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /sample/
+
+Sitemap: https://buildappsota.github.io/mixpage/sitemap.xml

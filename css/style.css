@@ -276,3 +276,4 @@ ul { padding: 0; list-style: none; }
 /* ---------------------------------------------- footer */
 .ftr { padding: 2rem 0; border-top: 1px solid var(--md-outline-variant); }
 .ftr p { color: var(--md-on-surface-variant); text-align: center; }
+.ftr__note { margin-top: 0.5rem; font-size: 0.8125rem; opacity: 0.85; }
