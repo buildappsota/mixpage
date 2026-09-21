@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -261,19 +261,21 @@
         </div>
       </div>
 
-      <!-- ============================================================
-           フォーム差し込み位置
-           Googleフォームの「埋め込む(<>)」で出るiframeタグを、
-           下の contact__form の中に貼り替える。
-           ============================================================ -->
       <div class="contact__form">
         <h3 class="title-lg">フォームからお送りいただく場合</h3>
-        <p class="body-md">施設名とご連絡先をご記入ください。3分ほどで送信できます。</p>
-        <div class="formframe" id="formSlot">
-          <p class="formframe__pending body-md">
-            ただいま準備中です。お急ぎの場合はお電話か、上記のメールアドレスまでご連絡ください。
-          </p>
+        <p class="body-md">施設名とご連絡先をご記入ください。必須は3項目だけです。</p>
+        <div class="formframe">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfvrD5fb6RemPVWff74giCVgt_2Zyq4Lc_02UkiJf_yx7ZUhw/viewform?embedded=true"
+            title="ご相談・お見積りフォーム"
+            loading="lazy"
+            marginheight="0" marginwidth="0">読み込んでいます…</iframe>
         </div>
+        <p class="formframe__alt body-md">
+          フォームが表示されない場合は、お手数ですが
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvrD5fb6RemPVWff74giCVgt_2Zyq4Lc_02UkiJf_yx7ZUhw/viewform" target="_blank" rel="noopener">別ウィンドウで開く</a>
+          か、お電話ください。
+        </p>
       </div>
     </div>
   </section>

@@ -285,9 +285,14 @@ ul { padding: 0; list-style: none; }
   border-radius: var(--shape-lg);
   overflow: hidden;
 }
-/* Googleフォームのiframeは自前の高さを持つので、幅だけ合わせる */
-.formframe iframe { display: block; width: 100%; border: 0; }
-.formframe__pending { padding: 1.5rem; color: var(--md-on-surface-variant); margin: 0; }
+/* Googleフォームのiframeは高さを自動調整できないため固定値を置く。
+   狭い画面では質問文が折り返して縦に伸びるので、その分を上乗せする。
+   （高さが足りないとiframeの中だけがスクロールして操作しづらくなる） */
+.formframe iframe { display: block; width: 100%; border: 0; height: 1760px; }
+@media (max-width: 48rem) { .formframe iframe { height: 2000px; } }
+@media (max-width: 30rem) { .formframe iframe { height: 2240px; } }
+.formframe__alt { margin-top: 0.75rem; color: var(--md-on-surface-variant); font-size: 0.8125rem; }
+.formframe__alt a { color: var(--md-primary); }
 
 /* ---------------------------------------------- footer */
 .ftr { padding: 2rem 0; border-top: 1px solid var(--md-outline-variant); }
