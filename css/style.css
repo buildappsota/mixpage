@@ -294,6 +294,47 @@ ul { padding: 0; list-style: none; }
 .formframe__alt { margin-top: 0.75rem; color: var(--md-on-surface-variant); font-size: 0.8125rem; }
 .formframe__alt a { color: var(--md-primary); }
 
+/* ---------------------------------------------- パンくず */
+.crumbs { padding: 1rem 1.5rem 0; color: var(--md-on-surface-variant); }
+.crumbs a { color: var(--md-on-surface-variant); text-decoration: none; }
+.crumbs a:hover { color: var(--md-primary); text-decoration: underline; }
+.crumbs span[aria-hidden] { margin: 0 0.5rem; }
+.crumbs span[aria-current] { color: var(--md-on-surface); }
+
+/* ---------------------------------------------- hero（下層ページ用・1カラム） */
+.hero--page { padding: 3rem 0 3.5rem; text-align: left; }
+.hero--page .hero__lead { max-width: 40rem; }
+
+/* ---------------------------------------------- チェックリスト */
+.checklist { margin-top: 1.5rem; display: grid; gap: 0.625rem; }
+.checklist li {
+  position: relative; padding-left: 1.75rem; color: var(--md-on-surface-variant);
+}
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 0.5em;
+  width: 0.625rem; height: 0.625rem; border-radius: var(--shape-full);
+  background: var(--md-primary);
+}
+
+/* ---------------------------------------------- FAQ */
+.faq { margin-top: 2rem; display: grid; gap: 0.75rem; }
+.faq details {
+  background: var(--md-surface-container-lowest);
+  border: 1px solid var(--md-outline-variant);
+  border-radius: var(--shape-md);
+  padding: 1rem 1.25rem;
+}
+.faq summary {
+  cursor: pointer; font-weight: 600; list-style: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; flex: none; font-size: 1.25rem; color: var(--md-primary);
+}
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin-top: 0.75rem; color: var(--md-on-surface-variant); }
+
 /* ---------------------------------------------- footer */
 .ftr { padding: 2rem 0; border-top: 1px solid var(--md-outline-variant); }
 .ftr p { color: var(--md-on-surface-variant); text-align: center; }
