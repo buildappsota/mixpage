@@ -2,169 +2,337 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>デイサービス こはる｜制作サンプル</title>
 <meta name="description" content="架空のデイサービスを想定した、ホームページ制作サンプルです。">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
-<div class="sample-bar">制作サンプルです。架空の施設であり、実在する事業所とは関係ありません。</div>
+<div class="sample-bar">制作サンプルです。「デイサービス こはる」は架空の施設で、実在する事業所とは関係ありません。</div>
 
 <a class="skip" href="#main">本文へスキップ</a>
 
-<header class="appbar">
-  <div class="wrap appbar__in">
-    <a class="appbar__brand" href="#main">
-      <span class="appbar__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--md-primary)"><path d="M12 3 3 10h2v9h5v-6h4v6h5v-9h2z"/></svg>
+<!-- ============================ ヘッダー（電話と見学を常に見せる） -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#main">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><circle cx="16" cy="16" r="15" fill="var(--c-leaf-wash)"/><path d="M16 7c-4 3-6 7-6 11 0 3 2.7 6 6 6s6-3 6-6c0-4-2-8-6-11z" fill="var(--c-leaf)"/><path d="M16 12v12" stroke="var(--c-leaf-wash)" stroke-width="1.6" stroke-linecap="round"/></svg>
       </span>
-      <span class="title-md">デイサービス こはる</span>
+      <span>
+        <span class="brand__sub">地域密着型デイサービス</span>
+        <span class="brand__name">こはる</span>
+      </span>
     </a>
-    <nav class="appbar__nav label-lg" aria-label="サイト内ナビゲーション">
-      <a href="#about">こはるについて</a>
+    <nav class="gnav" aria-label="サイト内ナビゲーション">
+      <a href="#feature">こはるの特徴</a>
       <a href="#day">1日の流れ</a>
       <a href="#price">ご利用料金</a>
       <a href="#area">送迎エリア</a>
+      <a href="#staff">スタッフ</a>
+      <a href="#caremanager">ケアマネジャー様へ</a>
     </nav>
-    <a class="btn btn--filled appbar__cta" href="#contact" aria-label="見学のご予約">
-      <span class="appbar__cta-long" aria-hidden="true">見学のご予約</span>
-      <span class="appbar__cta-short" aria-hidden="true">見学予約</span>
-    </a>
+    <div class="hdr__cta">
+      <a class="hdr__tel" href="tel:0000000000">
+        <span class="hdr__tel-label">お電話（8:30〜17:30）</span>
+        <span class="hdr__tel-num">000-000-0000</span>
+      </a>
+      <a class="btn btn--accent" href="#contact">見学・体験の申込</a>
+    </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============================ hero -->
+  <!-- ============================ メインビジュアル -->
   <section class="hero">
-    <div class="wrap hero__grid">
-      <div>
-        <p class="hero__eyebrow label-lg">地域密着型通所介護（デイサービス）</p>
-        <h1 class="display-sm">「また明日も行きたい」と<br>思える一日を。</h1>
-        <p class="hero__lead body-lg">
-          こはるは、定員18名の小さなデイサービスです。
-          一人ひとりのペースを大切に、食事・入浴・機能訓練をお手伝いします。
-          送迎はご自宅の玄関先まで伺います。
-        </p>
-        <div class="btn-row">
-          <a class="btn btn--filled" href="#contact">見学を申し込む</a>
-          <a class="btn btn--outlined" href="#day">1日の流れを見る</a>
-        </div>
+    <div class="hero__media">
+      <img src="img/hero.jpg" alt="窓の明るい室内で、介護スタッフが杖をついた女性の手を取って歩行を介助している様子" width="1600" height="872">
+    </div>
+    <div class="wrap hero__body">
+      <p class="hero__vacancy"><span class="dot dot--ok" aria-hidden="true"></span>木曜・土曜に空きがあります</p>
+      <h1 class="hero__catch">歩く力を、<br>おうちで使える力に。</h1>
+      <p class="hero__lead">定員18名の小さなデイサービスです。理学療法士が一人ひとりの歩き方を見て、家の中の段差や買い物の道のりに合わせた訓練をします。</p>
+      <div class="hero__btns">
+        <a class="btn btn--accent btn--lg" href="#contact">見学・体験の申込</a>
+        <a class="btn btn--line btn--lg" href="#day">1日の流れを見る</a>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <img class="hero__photo" src="img/hero.jpg" alt="窓の明るい室内で、介護スタッフが杖をついた女性の手を取って歩行を介助している様子" width="1600" height="872">
+  <!-- ============================ お知らせ・空き状況 -->
+  <section class="sec sec--news">
+    <div class="wrap news">
+      <div class="news__vacancy">
+        <h2 class="h-sec h-sec--sm">空き状況</h2>
+        <p class="news__updated">2026年9月22日 更新</p>
+        <table class="vacancy">
+          <caption class="sr-only">曜日ごとの空き状況</caption>
+          <thead><tr><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th></tr></thead>
+          <tbody><tr>
+            <td><span class="mark mark--no" aria-label="空きなし">×</span></td>
+            <td><span class="mark mark--few" aria-label="残りわずか">△</span></td>
+            <td><span class="mark mark--no" aria-label="空きなし">×</span></td>
+            <td><span class="mark mark--ok" aria-label="空きあり">◯</span></td>
+            <td><span class="mark mark--few" aria-label="残りわずか">△</span></td>
+            <td><span class="mark mark--ok" aria-label="空きあり">◯</span></td>
+          </tr></tbody>
+        </table>
+        <p class="legend">◯ 空きあり　△ 残りわずか　× 空きなし（キャンセル待ちを受け付けます）</p>
+      </div>
+      <div class="news__list">
+        <h2 class="h-sec h-sec--sm">お知らせ</h2>
+        <ul class="newslist">
+          <li><time datetime="2026-09-22">2026.09.22</time><span class="tag">空き状況</span><a href="#">10月の空き状況を更新しました</a></li>
+          <li><time datetime="2026-09-15">2026.09.15</time><span class="tag tag--event">行事</span><a href="#">敬老会を開きました。ご家族20名にお越しいただきました</a></li>
+          <li><time datetime="2026-09-01">2026.09.01</time><span class="tag">お知らせ</span><a href="#">土曜日の営業を始めました</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ============================ 特徴 -->
-  <section class="sec sec--container" id="about">
+  <section class="sec" id="feature">
     <div class="wrap">
-      <div class="sec__head">
-        <h2 class="headline-lg">こはるの特徴</h2>
-        <p class="sec__lead body-lg">定員18名。顔と名前が全員わかる規模だからこそできることがあります。</p>
+      <div class="sec-head">
+        <p class="sec-head__en">Feature</p>
+        <h2 class="h-sec">こはるの3つの特徴</h2>
       </div>
-      <div class="features">
 
-        <div class="feature">
-          <div class="feature__fig">
-            <img src="img/bath.jpg" alt="手すりと呼び出しボタン、シャワーチェアを備えた個浴。窓の外に緑が見える" width="1200" height="654">
-          </div>
-          <h3 class="title-lg">ゆったり入れるお風呂</h3>
-          <p class="body-md">手すり付きの個浴で、お一人ずつご案内します。車いすの方は機械浴にも対応しています。</p>
+      <div class="feature">
+        <div class="feature__img"><img src="img/rehab.jpg" alt="機能訓練室で、スタッフが平行棒を使った歩行訓練に付き添っている様子" width="1200" height="669"></div>
+        <div class="feature__txt">
+          <p class="feature__num">01</p>
+          <h3 class="h-item">理学療法士が常勤しています</h3>
+          <p>最初の見学時に歩き方と立ち上がりを見て、3か月ごとの目標を一緒に決めます。平行棒での歩行訓練のほか、自宅の玄関や浴室の段差を想定した練習もします。</p>
+          <ul class="checks">
+            <li>個別機能訓練加算（Ⅰ）イ・ロ</li>
+            <li>3か月ごとの評価をご家族にお渡しします</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="feature">
-          <div class="feature__fig">
-            <img src="img/rehab.jpg" alt="機能訓練室で、スタッフが平行棒を使った歩行訓練に付き添っている様子" width="1200" height="669">
-          </div>
-          <h3 class="title-lg">無理のない機能訓練</h3>
-          <p class="body-md">歩行器や平行棒を使った訓練のほか、椅子に座ったままできる体操も行います。ご本人の体調に合わせて調整します。</p>
+      <div class="feature feature--rev">
+        <div class="feature__img"><img src="img/bath.jpg" alt="手すりと呼び出しボタン、シャワーチェアを備えた個浴。窓の外に緑が見える" width="1200" height="654"></div>
+        <div class="feature__txt">
+          <p class="feature__num">02</p>
+          <h3 class="h-item">一人ずつ入る、ひのきの個浴</h3>
+          <p>大浴場ではなく、一人ずつお湯を張り替える個浴です。手すりとシャワーチェアを備え、同性のスタッフが介助します。立つのが難しい方は座ったまま入れる機械浴を使います。</p>
+          <ul class="checks">
+            <li>入浴介助加算（Ⅰ）</li>
+            <li>同性介助のご希望に対応します</li>
+          </ul>
         </div>
+      </div>
 
+      <div class="feature feature--text">
+        <div class="feature__txt">
+          <p class="feature__num">03</p>
+          <h3 class="h-item">送迎は玄関先まで。車いすのままでも</h3>
+          <p>リフト付きの車両で、ご自宅の玄関先までお迎えに上がります。階段や段差がある場合は、スタッフ2名で対応します。お迎えの時間は前日にお電話でお知らせします。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============================ 1日の流れ -->
-  <section class="sec" id="day">
-    <div class="wrap wrap--narrow">
-      <div class="sec__head">
-        <h2 class="headline-lg">1日の流れ</h2>
-        <p class="sec__lead body-lg">9時前後にお迎えに上がり、16時半ごろご自宅までお送りします。</p>
+  <section class="sec sec--tint" id="day">
+    <div class="wrap wrap--mid">
+      <div class="sec-head">
+        <p class="sec-head__en">Schedule</p>
+        <h2 class="h-sec">1日の流れ</h2>
+        <p class="sec-head__lead">8時半ごろお迎えに上がり、16時半ごろにご自宅までお送りします。</p>
       </div>
-      <dl class="timeline body-md">
-        <div><dt>9:00</dt><dd>お迎え・ご到着、血圧と体温の確認</dd></div>
-        <div><dt>10:00</dt><dd>入浴、またはお茶を飲みながらの歓談</dd></div>
-        <div><dt>11:00</dt><dd>体操・機能訓練</dd></div>
-        <div><dt>12:00</dt><dd>昼食・歯みがき</dd></div>
-        <div><dt>13:30</dt><dd>レクリエーション（習字、季節の工作、カラオケなど）</dd></div>
-        <div><dt>15:00</dt><dd>おやつ・お茶の時間</dd></div>
-        <div><dt>16:30</dt><dd>ご自宅までお送りします</dd></div>
-      </dl>
+      <ol class="timeline">
+        <li><time>8:30</time><div><h3>お迎え</h3><p>ご自宅の玄関先まで伺います。</p></div></li>
+        <li><time>9:30</time><div><h3>到着・健康チェック</h3><p>血圧と体温を測り、その日の体調をうかがいます。</p></div></li>
+        <li><time>10:00</time><div><h3>入浴</h3><p>お一人ずつご案内します。待っている間はお茶を飲みながら過ごします。</p></div></li>
+        <li><time>12:00</time><div><h3>昼食</h3><p>刻み食・とろみ食にも対応します。</p></div></li>
+        <li><time>13:30</time><div><h3>機能訓練</h3><p>理学療法士の計画に沿って、個別に行います。</p></div></li>
+        <li><time>14:30</time><div><h3>レクリエーション・おやつ</h3><p>書道、季節の工作、畑の手入れなど。参加は自由です。</p></div></li>
+        <li><time>16:00</time><div><h3>お送り</h3><p>ご家族がご不在の場合も、事前にご相談ください。</p></div></li>
+      </ol>
     </div>
   </section>
 
   <!-- ============================ 料金 -->
-  <section class="sec sec--container" id="price">
-    <div class="wrap wrap--narrow">
-      <div class="sec__head">
-        <h2 class="headline-lg">ご利用料金</h2>
-        <p class="sec__lead body-lg">介護保険の自己負担が1割の方の場合の、1日あたりの目安です。</p>
+  <section class="sec" id="price">
+    <div class="wrap wrap--mid">
+      <div class="sec-head">
+        <p class="sec-head__en">Price</p>
+        <h2 class="h-sec">ご利用料金の目安</h2>
+        <p class="sec-head__lead">1回（7時間以上8時間未満）あたりの自己負担額です。入浴と個別機能訓練を利用した場合で計算しています。</p>
       </div>
-      <dl class="price-table body-md">
-        <div><dt>ご利用料（要介護1・1割負担の場合）</dt><dd>約750円</dd></div>
-        <div><dt>昼食・おやつ代</dt><dd>700円</dd></div>
-        <div><dt>入浴加算</dt><dd>約50円</dd></div>
-        <div><dt>1日あたりの合計</dt><dd>約1,500円</dd></div>
-      </dl>
-      <p class="note body-md">
-        金額は要介護度・自己負担割合・加算の有無により変わります。
-        正確な金額は、担当のケアマネジャーさまか当施設までお問い合わせください。
-        ※本ページはサンプルのため、金額はすべて架空の例です。
-      </p>
+      <div class="table-wrap">
+        <table class="price">
+          <caption class="sr-only">要介護度と負担割合ごとの1回あたりの利用料</caption>
+          <thead><tr><th scope="col">要介護度</th><th scope="col">1割負担</th><th scope="col">2割負担</th><th scope="col">3割負担</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">要介護1</th><td>約900円</td><td>約1,800円</td><td>約2,700円</td></tr>
+            <tr><th scope="row">要介護2</th><td>約1,040円</td><td>約2,080円</td><td>約3,120円</td></tr>
+            <tr><th scope="row">要介護3</th><td>約1,180円</td><td>約2,360円</td><td>約3,540円</td></tr>
+            <tr><th scope="row">要介護4</th><td>約1,320円</td><td>約2,640円</td><td>約3,960円</td></tr>
+            <tr><th scope="row">要介護5</th><td>約1,460円</td><td>約2,920円</td><td>約4,380円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="extra">
+        <h3 class="h-item h-item--sm">保険外の費用</h3>
+        <dl class="extra__list">
+          <div><dt>昼食代（おやつ込み）</dt><dd>700円</dd></div>
+          <div><dt>おむつ・パッド</dt><dd>実費</dd></div>
+          <div><dt>レクリエーションの材料費</dt><dd>実費（月200円程度）</dd></div>
+        </dl>
+      </div>
+      <p class="note">※サンプルのため、金額はすべて架空の例です。実際の金額は要介護度・加算・地域区分によって変わります。</p>
     </div>
   </section>
 
   <!-- ============================ 送迎エリア -->
-  <section class="sec" id="area">
-    <div class="wrap wrap--narrow">
-      <div class="sec__head">
-        <h2 class="headline-lg">送迎エリア</h2>
-        <p class="sec__lead body-lg">下記の地域はご自宅の玄関先まで送迎いたします。エリア外の方もご相談ください。</p>
+  <section class="sec sec--tint" id="area">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-head__en">Area</p>
+        <h2 class="h-sec">送迎エリア</h2>
+        <p class="sec-head__lead">事業所から車でおおむね20分の範囲です。エリア外の方もご相談ください。</p>
       </div>
-      <div class="area-chips">
-        <span class="chip">○○町</span>
-        <span class="chip">△△</span>
-        <span class="chip">□□</span>
-        <span class="chip">××台</span>
-        <span class="chip">◇◇本町</span>
-        <span class="chip">☆☆ヶ丘</span>
+      <div class="area">
+        <div class="area__map" aria-hidden="true">
+          <svg viewBox="0 0 320 240" role="img">
+            <rect width="320" height="240" rx="18" fill="var(--c-surface)"/>
+            <path d="M0 150 C60 130 90 170 150 150 S250 110 320 130" stroke="var(--c-water)" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="160" cy="120" r="92" fill="var(--c-leaf)" opacity=".12"/>
+            <circle cx="160" cy="120" r="92" fill="none" stroke="var(--c-leaf)" stroke-width="2" stroke-dasharray="6 6"/>
+            <g fill="var(--c-ink-soft)" font-size="12" font-family="Zen Maru Gothic, sans-serif">
+              <text x="98" y="70">○○町</text><text x="190" y="66">△△</text>
+              <text x="78" y="178">□□</text><text x="200" y="182">××台</text>
+            </g>
+            <circle cx="160" cy="120" r="12" fill="var(--c-accent)"/>
+            <text x="160" y="124" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">こ</text>
+          </svg>
+        </div>
+        <div class="area__list">
+          <h3 class="h-item h-item--sm">送迎できる地域</h3>
+          <ul class="chips">
+            <li>○○町</li><li>△△</li><li>□□</li><li>××台</li><li>◇◇本町</li><li>☆☆ヶ丘</li>
+          </ul>
+          <dl class="access">
+            <div><dt>所在地</dt><dd>○○県○○市○○町0-0-0</dd></div>
+            <div><dt>駐車場</dt><dd>5台（見学の方もご利用いただけます）</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================ CTA -->
-  <section class="cta" id="contact">
-    <div class="wrap wrap--narrow">
-      <h2 class="headline-lg">まずは見学にお越しください</h2>
-      <p class="cta__lead body-lg">1時間ほどで施設をご案内します。ご本人さまだけ、ご家族さまだけのご見学も歓迎です。</p>
-      <div class="cta__contact">
-        <div class="cta__card">
-          <p class="label-lg">お電話</p>
-          <p class="title-lg">000-0000-0000</p>
-          <p class="body-md">受付時間 8:30〜17:30（日曜休）</p>
+  <!-- ============================ スタッフ -->
+  <section class="sec" id="staff">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-head__en">Staff</p>
+        <h2 class="h-sec">スタッフ紹介</h2>
+        <p class="sec-head__lead">毎日同じ顔ぶれでお迎えします。</p>
+      </div>
+      <ul class="staff">
+        <li class="staff__card">
+          <span class="staff__face" aria-hidden="true">山</span>
+          <p class="staff__role">管理者／介護福祉士</p>
+          <p class="staff__name">山田 花子</p>
+          <p class="staff__msg">介護の仕事は20年目です。ご家族の「最近こうなんです」を聞くのがいちばん大事だと思っています。</p>
+        </li>
+        <li class="staff__card">
+          <span class="staff__face staff__face--b" aria-hidden="true">佐</span>
+          <p class="staff__role">理学療法士</p>
+          <p class="staff__name">佐藤 健</p>
+          <p class="staff__msg">病院で8年働いたあと、暮らしの近くでリハビリをしたくてこはるに来ました。</p>
+        </li>
+        <li class="staff__card">
+          <span class="staff__face staff__face--c" aria-hidden="true">鈴</span>
+          <p class="staff__role">看護師</p>
+          <p class="staff__name">鈴木 和子</p>
+          <p class="staff__msg">服薬や体調の変化は、連絡帳でご家族と主治医にお伝えします。</p>
+        </li>
+      </ul>
+      <p class="note">※スタッフの氏名・経歴は架空です。実際のサイトでは顔写真を掲載します。</p>
+    </div>
+  </section>
+
+  <!-- ============================ ご利用までの流れ -->
+  <section class="sec sec--tint" id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-head__en">Flow</p>
+        <h2 class="h-sec">ご利用までの流れ</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="steps__n">1</span><h3>ケアマネジャーに相談</h3><p>「こはるを見てみたい」とお伝えください。直接お電話いただいても構いません。</p></li>
+        <li><span class="steps__n">2</span><h3>見学</h3><p>30分ほどで施設をご案内します。ご本人がいなくても大丈夫です。</p></li>
+        <li><span class="steps__n">3</span><h3>体験利用（無料）</h3><p>半日から1日、実際に過ごしていただきます。昼食代のみいただきます。</p></li>
+        <li><span class="steps__n">4</span><h3>契約・利用開始</h3><p>ご自宅に伺ってご説明します。最短で翌週から利用できます。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ ケアマネジャー様へ -->
+  <section class="sec" id="caremanager">
+    <div class="wrap wrap--mid">
+      <div class="cm">
+        <div class="sec-head">
+          <p class="sec-head__en">For Care Managers</p>
+          <h2 class="h-sec">ケアマネジャー様へ</h2>
+          <p class="sec-head__lead">ご紹介の前にご確認いただきたい情報をまとめています。</p>
         </div>
-        <div class="cta__card">
-          <p class="label-lg">所在地</p>
-          <p class="title-md">○○県○○市○○町0-0-0</p>
-          <p class="body-md">駐車場5台あり</p>
+        <dl class="cm__table">
+          <div><dt>サービス種別</dt><dd>地域密着型通所介護（定員18名）</dd></div>
+          <div><dt>受け入れ</dt><dd>要支援1〜要介護5（総合事業の通所型サービスにも対応）</dd></div>
+          <div><dt>医療的ケア</dt><dd>インスリン注射・胃ろう・在宅酸素：対応可／たん吸引：要相談／人工呼吸器：対応不可</dd></div>
+          <div><dt>認知症</dt><dd>対応可。認知症介護実践者研修の修了者が在籍</dd></div>
+          <div><dt>算定加算</dt><dd>入浴介助加算（Ⅰ）、個別機能訓練加算（Ⅰ）イ・ロ、口腔機能向上加算（Ⅰ）、科学的介護推進体制加算</dd></div>
+          <div><dt>提供時間</dt><dd>7時間以上8時間未満（9:30〜16:30）／短時間利用は要相談</dd></div>
+          <div><dt>ご連絡</dt><dd>TEL 000-000-0000／FAX 000-000-0001（空き照会はFAXでも承ります）</dd></div>
+        </dl>
+        <p class="cm__dl">重要事項説明書と利用申込書（PDF）は、お電話かFAXでご依頼ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ よくある質問 -->
+  <section class="sec sec--tint" id="faq">
+    <div class="wrap wrap--mid">
+      <div class="sec-head">
+        <p class="sec-head__en">Q&amp;A</p>
+        <h2 class="h-sec">よくあるご質問</h2>
+      </div>
+      <div class="faq">
+        <details><summary>週1回だけの利用でもいいですか？</summary><p>はい。週1回から利用できます。まずは体験利用で様子を見てから、回数を決める方が多いです。</p></details>
+        <details><summary>急に休む場合はどうすればいいですか？</summary><p>当日の朝8時までにお電話ください。キャンセル料はいただきません。</p></details>
+        <details><summary>着替えや持ち物は必要ですか？</summary><p>入浴される方は着替え一式とタオルをお持ちください。お薬と連絡帳もお願いします。</p></details>
+        <details><summary>本人が行きたがらないのですが…</summary><p>最初は嫌がる方も少なくありません。見学だけ、お茶を飲むだけ、という来所から始めることもできます。ご相談ください。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 最後の申込 -->
+  <section class="contact" id="contact">
+    <div class="wrap wrap--mid">
+      <h2 class="contact__title">見学・体験のお申し込み</h2>
+      <p class="contact__lead">お電話がいちばん早くつながります。ご本人だけ、ご家族だけの見学も歓迎です。</p>
+      <a class="contact__tel" href="tel:0000000000">
+        <span class="contact__tel-label">お電話（受付 8:30〜17:30／日曜休み）</span>
+        <span class="contact__tel-num">000-000-0000</span>
+      </a>
+      <div class="contact__form">
+        <p class="contact__form-title">フォームからお申し込み</p>
+        <div class="fake-form" aria-label="申込フォームの例">
+          <p class="fake-form__row"><span>お名前</span><span class="fake-form__box"></span></p>
+          <p class="fake-form__row"><span>お電話番号</span><span class="fake-form__box"></span></p>
+          <p class="fake-form__row"><span>ご希望</span><span class="fake-form__opts"><span>見学</span><span>体験利用</span><span>資料請求</span></span></p>
+          <p class="fake-form__note">※制作サンプルのため、フォームは表示のみです。実際のサイトでは送信するとメールで届きます。</p>
         </div>
       </div>
     </div>
@@ -173,14 +341,30 @@
 </main>
 
 <footer class="ftr">
-  <div class="wrap wrap--narrow">
-    <p>
+  <div class="wrap ftr__in">
+    <div>
+      <p class="ftr__name">地域密着型デイサービス こはる</p>
+      <dl class="ftr__info">
+        <div><dt>運営</dt><dd>株式会社○○（架空）</dd></div>
+        <div><dt>事業所番号</dt><dd>0000000000</dd></div>
+        <div><dt>営業日</dt><dd>月〜土曜日（祝日も営業／年末年始休み）</dd></div>
+        <div><dt>営業時間</dt><dd>9:30〜16:30</dd></div>
+        <div><dt>電話受付</dt><dd>8:30〜17:30</dd></div>
+      </dl>
+    </div>
+    <p class="ftr__sample">
       本ページは、ホームページ制作の内容をご覧いただくための<strong>制作サンプル</strong>です。
-      「デイサービス こはる」は架空の施設であり、掲載している料金・住所・電話番号・送迎エリアはすべて架空の例です。実在する事業所とは一切関係ありません。
+      「デイサービス こはる」は架空の施設であり、掲載している料金・住所・電話番号・スタッフ・送迎エリアはすべて架空の例です。実在する事業所とは一切関係ありません。
+      制作：通潤ウェブ
     </p>
-    <p>制作：通潤ウェブ</p>
   </div>
 </footer>
+
+<!-- スマートフォンでは画面下に電話と見学申込を固定する -->
+<nav class="bottombar" aria-label="お問い合わせ">
+  <a class="bottombar__tel" href="tel:0000000000">電話する</a>
+  <a class="bottombar__cta" href="#contact">見学・体験の申込</a>
+</nav>
 
 </body>
 </html>
